@@ -60,7 +60,7 @@ function Home(){
                             <div className="absolute -z-10 top-14 w-[80%] h-0 transform rotate-45 shadow-[0_0_5rem_20px_#70E747] md:shadow-[0_0_900px_40px_#70E747]"></div>
                             <div  className="relative w-full h-auto  md:h-full grid grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-[50%_50%] pt-20 ">
                                 <div className="relative w-full flex justify-center items-center">
-                                    <div className="relative  w-full h-full flex flex-col items-center top-14  font-display ">
+                                    <div className="relative  w-full h-full flex flex-col items-center top-14  font-mono ">
                                         <div className='relative flex flex-col items-center  gap-4 font-thin tracking-widest'>                                       
                                             <h1 className='text-2xl md:text-3xl 2xl:text-4xl  text-gray-400 animated-text'>Code without Limits </h1>
                                             <h1 className='text-2xl md:text-3xl 2xl:text-4xl  text-gray-400 animated-text'>Progress without End </h1>
@@ -100,10 +100,10 @@ function Home(){
                                         </div>
                                         <div className='relative flex'>
                                             <div className='w-1 h-auto bg-gray-400 transform -rotate-180 mr-4'></div>
-                                            <div className='flex flex-col font-display'>
-                                                <h1 className='flex text-lg md:text-xl font-semibold text-[#28acaca4]'>FULL-STACK DEVELOPER / APPRENTICE DATA SCIENTIST</h1>
-                                                <h1 className='text-gray-400 text-sm font-extralight'>Dear Visitor ,</h1>
-                                                <p className=' mt-2 text-gray-400 text-sm font-extralight'>
+                                            <div className='flex flex-col '>
+                                                <h1 className='flex text-lg md:text-xl font-semibold text-[#28acaca4] font-mono'>FULL-STACK DEVELOPER / APPRENTICE DATA SCIENTIST</h1>
+                                                <h1 className='text-gray-400 text-sm font-extralight font-display'>Dear Visitor ,</h1>
+                                                <p className=' mt-2 text-gray-400 text-sm font-extralight font-display'>
                                                     I architect the bridge between technology and human experience. As a passionate full-stack developer, I engineer the invisible foundations (Backend with Python, Django, Flask, Node.js) and craft the intuitive interactions (Frontend with React, Tailwind CSS). My goal is to transform code into robust and elegant applications.
                                                     This pursuit of technical excellence is powered by my dual expertise in cognitive science and data science. By delving into AI and cognitive models, I gain a unique understanding of the user. The result? Digital solutions that are not just functional, but intelligent and deeply human-centered.
                                                 </p>
@@ -127,16 +127,16 @@ function Home(){
                     
                 </div>
                 <section id="skill-section" className='relative  w-full min-h-screen' >
-                <Skill></Skill>
+                    <Skill></Skill>
                 </section>
-                <section id="projects-section" className='relative  w-full min-h-screen'>
-                <Projects></Projects>
+                <section id="projects-section" className='relative  w-full min-h-screen overflow-hidden'>
+                    <Projects></Projects>
                 </section>
                 <section id="team-section" className='relative  w-full min-h-screen'>
-                <Team></Team>
+                    <Team></Team>
                 </section>
                 <section id="contact-section" className='relative  w-full min-h-screen'>
-                <Contact></Contact>
+                     <Contact></Contact>
                 </section>
         </main>
         

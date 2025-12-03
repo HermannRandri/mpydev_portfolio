@@ -2,7 +2,7 @@ import { useState } from "react";
 function Nav(){
     const [show, setShow] = useState(false)
     return (<>
-             <nav className="hidden md:flex fixed w-full  justify-center py-4 px-2 backdrop-blur-lg bg-black/50 shadow-[0_1px_200px_20px] z-40">
+             <nav className="hidden md:flex fixed w-full  justify-center py-4 px-2 backdrop-blur-lg bg-black/50 shadow-[0_1px_200px_20px] z-40 font-mono">
                     <img  src="dark_green_logo.png" className="w-40"/>
                     <ul className="w-full flex flex-row text-sm text-gray-300 font-display font-thin justify-between px-10 py-2 cursor-default">
                         <li className="tracking-tighter transform transition-all  hover:text-orange-300 hover:tracking-widest text-"><a href="#home">HOME</a></li>
@@ -12,7 +12,7 @@ function Nav(){
                         <li className="tracking-tighter transform transition-all  hover:text-orange-300 hover:tracking-widest"><a href="#contact-section">CONTACT US</a></li>
                     </ul>
              </nav>
-             <nav className={`fixed w-full flex flex-col z-50 md:hidden justify-center py-4 px-2 backdrop-blur-lg bg-black/50 shadow-[0_1px_200px_20px]  ${show ? "h-[50%]":"h-20"} transform  transition-all duration-300 `}>
+             <nav className={`fixed w-full flex flex-col z-50 md:hidden justify-center py-4 px-2 backdrop-blur-lg bg-black/50 shadow-[0_1px_200px_20px]  ${show ? "h-[50%]":"h-20"} transform  transition-all duration-300 font-mono`}>
                     <img  src="dark_green_logo.png" className=" mx-auto w-40"/>
                     <ul className={`w-full  flex-col gap-2 text-sm text-gray-300 font-thin font-display justify-between px-2 py-2 cursor-pointer ${show ? "flex":"hidden"}`}>
                         <hr className="opacity-30 my-2" />
