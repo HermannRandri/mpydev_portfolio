@@ -1,9 +1,9 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import TeamLine from "../assets/team-line.png"
+import TeamLine from "../assets/team-line.webp"
 import { useEffect, useRef } from "react";
-import pdp from "../assets/profile_image_inverted2.png"
-import nopdp from "../assets/no-profile.png"
+import pdp from "../assets/profile_image_inverted2.webp"
+import nopdp from "../assets/no-profile.webp"
 
 gsap.registerPlugin(ScrollTrigger);
 function Team(){
@@ -12,6 +12,7 @@ function Team(){
     useEffect(() => {
         const Line = lineRef.current;
         const Profile = ProfilRef.current;
+        ScrollTrigger.refresh();
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger:".title-container",
@@ -20,8 +21,6 @@ function Team(){
                 scrub:1,
                 ease:"power3.inOut",
                 stagger:0.5,
-
-
             }
         })
         .from(Line,

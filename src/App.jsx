@@ -9,11 +9,11 @@ function App() {
       path:'/',
       element: <Home />
     },
-  ])
-
+  ], {basename: "/mpydev_portfolio",})
+ 
   return (
     <>
-      <RouterProvider router ={route}/>
+      <RouterProvider  router ={route}/>
     </>
   )
 }

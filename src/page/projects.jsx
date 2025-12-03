@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import project1 from "../assets/projects/project-1.png";
-import project2 from "../assets/projects/project-2.png";
-import project3 from "../assets/projects/project-3.png";
-import project4 from "../assets/projects/project-4.png";
+import project1 from "../assets/projects/project-1.webp";
+import project2 from "../assets/projects/project-2.webp";
+import project3 from "../assets/projects/project-3.webp";
+import project4 from "../assets/projects/project-4.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 function Project(){
@@ -25,7 +25,7 @@ function Project(){
         const scrollWidth =  projectScroll.scrollWidth;
         const parentWidth = projectScroll.parentElement.offsetWidth;
         const scrollDistance =  scrollWidth - parentWidth;
-        
+        ScrollTrigger.refresh();
         gsap.to(projectScroll,{
            x:-scrollDistance,
            ease:"power2.inOut",
@@ -37,6 +37,7 @@ function Project(){
              pin:true, 
              pinSpacing:true,
              invalidateOnRefresh: true,
+             anticipatePin: 1
    
            }
         })

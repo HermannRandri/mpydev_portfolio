@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import Spline from '@splinetool/react-spline';
-import Circuit from '../assets/circuit.png';
+import Circuit from '../assets/circuit.webp';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -28,7 +28,7 @@ function skill(){
         const titleWidth = titleRef.scrollWidth;
         const containerWidth = titleRef.parentElement.offsetWidth;
         const scrollDistance = titleWidth - containerWidth;
- 
+        ScrollTrigger.refresh();
         gsap.utils.toArray(".skills-item").forEach((skill) => {
             gsap.fromTo(skill, 
                 {

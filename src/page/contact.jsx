@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import VoltButton from "../assets/volt-button.png"
-import EndBg from "../assets/bg-end.png"
+import VoltButton from "../assets/volt-button.webp"
+import EndBg from "../assets/bg-end.webp"
 
 gsap.registerPlugin(ScrollTrigger);
 function Contact(){
@@ -87,6 +87,7 @@ function Contact(){
 
     useEffect(() =>{
         const EndTitle = EndRef.current;
+        ScrollTrigger.refresh();
         gsap.fromTo(EndTitle,
             {
                 opacity:0,
