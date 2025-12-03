@@ -13,31 +13,31 @@ import pdp from "../assets/profile_image_inverted2.webp"
 gsap.registerPlugin(ScrollTrigger)
 function Home(){
  const [drop, setDrop ] = useState(false)
-//  const [Pageloading, setPageLoading] = useState(true)
+ const [Pageloading, setPageLoading] = useState(true)
 
  const displayDrop = ()  =>{
     setDrop(!drop)
  }
  
-//  useEffect(() => {
-//     const handleLoad = () =>{
-//          setTimeout(() => {
-//             setPageLoading(false);
-//           }, 8000);
-//     } 
+ useEffect(() => {
+    const handleLoad = () =>{
+         setTimeout(() => {
+            setPageLoading(false);
+          }, 6000);
+    } 
 
-//     if (document.readyState === "complete") {
-//       setPageLoading(false);
-//     } else {
-//       window.addEventListener("load", handleLoad);
-//     }
+    if (document.readyState === "complete") {
+      setPageLoading(false);
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
 
-//     return () => window.removeEventListener("load", handleLoad);
-//  }, [])
+    return () => window.removeEventListener("load", handleLoad);
+ }, [])
 
     
     return (<>
-       {/* {Pageloading &&
+       {Pageloading &&
         <div className='fixed z-50 w-full h-screen bg-black '>       
             <div className='relative w-full h-full flex flex-col items-center justify-center gap-4 '>
                <div className=' w-80 shadow-[0_0_200px_30px_#44910B]'></div> 
@@ -47,7 +47,7 @@ function Home(){
                <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 24 24"><path fill="none" stroke="#37d612" strokeLinecap="round" strokeWidth={2} d="M12 6.99998C9.1747 6.99987 6.99997 9.24998 7 12C7.00003 14.55 9.02119 17 12 17C14.7712 17 17 14.75 17 12"><animateTransform attributeName="transform" attributeType="XML" dur="560ms" from="0,12,12" repeatCount="indefinite" to="360,12,12" type="rotate"></animateTransform></path></svg>
             </div>
         </div>
-       } */}
+       }
     
         <main className={`w-full min-h-screen overflow-x-hidden`}>
                 <div className=" w-full min-h-screen" >  
