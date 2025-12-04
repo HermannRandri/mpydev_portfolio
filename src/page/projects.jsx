@@ -32,7 +32,7 @@ function Project(){
            scrollTrigger: {
              trigger:"#projectScrollParent",
              start:"top 25%",
-             end:`+=${scrollDistance}`,
+             end:`+=${scrollDistance + window.innerHeight}`,
              scrub:1,
              pin:true, 
              pinSpacing:true,
@@ -51,7 +51,7 @@ function Project(){
             <div className="absolute   top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-[0_0_100px_80px_#28acaca4] md:shadow-[0_0_500px_100px_#28acaca4]"></div>
             <div ref={projectScrollRef} className="relative flex h-full mx-6 space-x-4 whitespace-nowrap" >
                 {
-                    projectsData.map((data, index) =>{ return(
+                    projectsData.map((data, index) => { return(
                         <div key={index} className="min-w-full md:min-w-[35%] h-1/2 brightness-75 bg-cover bg-center bg-no-repeat" onMouseEnter={() => data.hoverSetter(true)} onMouseLeave={() =>data.hoverSetter(false)} style={{ backgroundImage: `url(${data.image})` }}>
                             <div className={`${data.hovered ? "h-0": "h-3/4"}  transition-all duration-200`} >
                                 

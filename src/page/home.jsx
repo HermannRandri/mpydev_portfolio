@@ -20,11 +20,6 @@ function Home(){
  }
  
  useEffect(() => {
-    window.addEventListener("unhandledrejection", (event) => {
-        if (event.reason?.message?.includes("message channel closed")) {
-          event.preventDefault();
-        }
-      });
     const id = setTimeout(() => setPageLoading(false), 5000);
     
     return () => clearTimeout(id);
