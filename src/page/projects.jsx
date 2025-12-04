@@ -62,12 +62,12 @@ function Project(){
             ScrollTrigger.refresh();
         };
     
-        window.addEventListener('resize', handleResize);
-        window.addEventListener('orientationchange', handleResize);
+        // window.addEventListener('resize', handleResize);
+        // window.addEventListener('orientationchange', handleResize);
     
         return () => {
-            window.removeEventListener('resize', handleResize);
-            window.removeEventListener('orientationchange', handleResize);
+            // window.removeEventListener('resize', handleResize);
+            // window.removeEventListener('orientationchange', handleResize);
             ScrollTrigger.getAll().forEach(element => element.kill());
         }
     }, []);
