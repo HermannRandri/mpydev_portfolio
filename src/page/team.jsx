@@ -72,9 +72,10 @@ function Team(){
                 stagger:0.2,
                 scrollTrigger:{
                     trigger: ".team-container",
-                    start:"top 20%",
-                    end:"bottom 20%",
-                    toggleActions:"play none none reverse"
+                    start:"top 50%",
+                    end:"bottom 50%",
+                    toggleActions:"play none none reverse",
+                
                 }
                
             }

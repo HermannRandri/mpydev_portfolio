@@ -31,13 +31,13 @@ function Project(){
            ease:"power2.inOut",
            scrollTrigger: {
              trigger:"#projectScrollParent",
-             start:"top 40%",
+             start:"top 25%",
              end:`+=${scrollDistance}`,
              scrub:1,
              pin:true, 
              pinSpacing:true,
              invalidateOnRefresh: true,
-             anticipatePin: 1,
+             anticipatePin: 1
                
            }
         })

@@ -23,7 +23,7 @@ function Home(){
     const handleLoad = () =>{
          setTimeout(() => {
             setPageLoading(false);
-          }, 6000);
+          }, 5000);
     } 
 
     if (document.readyState === "complete") {
@@ -49,7 +49,7 @@ function Home(){
         </div>
        }
     
-        <main className={`w-full min-h-screen overflow-x-hidden`}>
+        <main className={`w-full  ${Pageloading ? 'h-screen overflow-y-hidden':'min-h-screen overflow-x-hidden overflow-y-auto'}`}>
                 <div className=" w-full min-h-screen" >  
                         <div className='w-full shadow-[0_120px_100px_30px_#28acaca4] md:shadow-[0_120px_400px_30px_#28acaca4]'></div>  
                         <div className="relative h-auto" id='home'>
@@ -64,7 +64,7 @@ function Home(){
                                         <div className='relative flex flex-col items-center  gap-4 font-thin tracking-widest'>                                       
                                             <h1 className='text-2xl md:text-3xl 2xl:text-4xl  text-gray-400 animated-text'>Code without Limits </h1>
                                             <h1 className='text-2xl md:text-3xl 2xl:text-4xl  text-gray-400 animated-text'>Progress without End </h1>
-                                            <h1 className='text-md md:text-lg 2xl:text-xl text-[#28acaca4] tracking-widest'>Into the Endless Universe of Coding</h1>
+                                            <h1 className='text-center text-md md:text-lg mx-4 2xl:text-xl text-[#28acaca4] tracking-widest'>Into the Endless Universe of Coding</h1>
                                         </div>
                                     </div>
                                     <div className='absolute w-full h-[70%] md:h-[80%]'>
@@ -126,7 +126,7 @@ function Home(){
                         </div>
                     
                 </div>
-                <section id="skill-section" className='relative  w-full min-h-screen' >
+                <section id="skill-section" className='relative  w-full min-h-screen mb-10' >
                     <Skill></Skill>
                 </section>
                 <section id="projects-section" className='relative  w-full min-h-screen overflow-hidden'>
