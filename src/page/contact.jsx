@@ -57,6 +57,7 @@ function Contact(){
 
             if(validate && values.name != "" && values.email != "" && values.message != "" ){
                 setLoading(true);
+                await
                 emailjs
                 .sendForm(
                     "service_k1ogxwu",

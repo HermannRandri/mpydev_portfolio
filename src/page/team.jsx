@@ -54,7 +54,7 @@ function Team(){
             {
                 opacity:0.8,
                 x:0,
-                width:"55%",
+                width:"20%",
                 y:0,
                 duration:1.2,
                 ease:"power2.inOut",
@@ -95,7 +95,7 @@ function Team(){
                  <img ref={lineRef}  src={TeamLine} className="w-0 mt-4"/>
              </div>
              <div className="relative w-full flex flex-col items-center">
-                <img  src={pdp} className="w-[35%] md:w-[10%] opacity-70" />
+                <img ref={ProfilRef}  src={pdp} className="w-[35%] md:w-[10%] opacity-70" />
                 <h1 className="text-gray-300 font-thin"><em>Randrianirina Hermann</em></h1>
                 <h2 className="text-sm text-[#28acaca4] font-thin">Full-stack Developer / Data scientist</h2>
                 <h3 className="text-xs text-gray-300 font-thin">Co-Founder of <strong className="text-green-800">mpy'dev</strong></h3>
