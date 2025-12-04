@@ -37,8 +37,7 @@ function Project(){
              pin:true, 
              pinSpacing:true,
              invalidateOnRefresh: true,
-             anticipatePin: 1
-               
+             anticipatePin: 1              
            }
         })
 

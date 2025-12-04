@@ -12,6 +12,7 @@ function Team(){
     useEffect(() => {
         const Line = lineRef.current;
         const Profile = ProfilRef.current;
+        let mm = gsap.matchMedia();
         ScrollTrigger.refresh();
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -54,7 +55,7 @@ function Team(){
             {
                 opacity:0.8,
                 x:0,
-                width:"20%",
+                width:"+=80px",
                 y:0,
                 duration:1.2,
                 ease:"power2.inOut",
