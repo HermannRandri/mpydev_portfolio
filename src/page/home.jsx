@@ -20,7 +20,7 @@ function Home(){
  }
  
  useEffect(() => {
-    const id = setTimeout(() => setPageLoading(false), 5000);
+    const id = setTimeout(() => setPageLoading(false), 8000);
     
     return () => clearTimeout(id);
         
