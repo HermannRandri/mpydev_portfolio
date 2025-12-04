@@ -53,7 +53,7 @@ function Home(){
                                 <div className="relative w-full flex justify-center items-center">
                                     <div className="relative  w-full h-full flex flex-col items-center top-14  font-mono ">
                                         <div className='relative flex flex-col items-center  gap-4 font-thin tracking-widest'>                                       
-                                            <h1 className='text-2xl md:text-3xl 2xl:text-4xl  text-gray-400 animated-text'>Code without Limits </h1>
+                                            <h1 className='text-2xl md:text-3xl 2xl:text-4xl  text-gray-400 animated-text'>Code without Limits kkkk</h1>
                                             <h1 className='text-2xl md:text-3xl 2xl:text-4xl  text-gray-400 animated-text'>Progress without End </h1>
                                             <h1 className='text-center text-md md:text-lg mx-4 2xl:text-xl text-[#28acaca4] tracking-widest'>Into the Endless Universe of Coding</h1>
                                         </div>

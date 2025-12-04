@@ -22,29 +22,56 @@ function Project(){
 
     useEffect(() => {
         const projectScroll = projectScrollRef.current;
-        const scrollWidth =  projectScroll.scrollWidth;
+        if (!projectScroll) return;
+    
+        const scrollWidth = projectScroll.scrollWidth;
         const parentWidth = projectScroll.parentElement.offsetWidth;
-        const scrollDistance =  scrollWidth - parentWidth;
-        ScrollTrigger.refresh();
-        gsap.to(projectScroll,{
-           x:-scrollDistance,
-           ease:"power2.inOut",
-           scrollTrigger: {
-             trigger:"#projectScrollParent",
-             start:"top 25%",
-             end:`+=${scrollDistance + window.innerHeight}`,
-             scrub:1,
-             pin:true, 
-             pinSpacing:true,
-             invalidateOnRefresh: true,
-             anticipatePin: 1              
-           }
-        })
-
+        const scrollDistance = scrollWidth - parentWidth;
+        
+        // Force a small delay for mobile browsers to stabilize
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 100);
+    
+        const tl = gsap.to(projectScroll, {
+            x: -scrollDistance,
+            ease: "power2.inOut",
+            scrollTrigger: {
+                trigger: "#projectScrollParent",
+                start: "top 25%",
+                end: () => `+=${scrollDistance + window.innerHeight}`,
+                scrub: 1,
+                pin: true,
+                pinSpacing: true,
+                invalidateOnRefresh: true,
+                anticipatePin: 1,
+                // Mobile-specific fixes
+                onUpdate: self => {
+                    // Prevent overlap on mobile
+                    if (window.innerWidth <= 768) {
+                        const progress = self.progress;
+                        if (progress > 0.95) {
+                            gsap.to(projectScroll, { x: -scrollDistance * 0.95 });
+                        }
+                    }
+                }
+            }
+        });
+    
+        // Handle mobile resize
+        const handleResize = () => {
+            ScrollTrigger.refresh();
+        };
+    
+        window.addEventListener('resize', handleResize);
+        window.addEventListener('orientationchange', handleResize);
+    
         return () => {
+            window.removeEventListener('resize', handleResize);
+            window.removeEventListener('orientationchange', handleResize);
             ScrollTrigger.getAll().forEach(element => element.kill());
         }
-    }, [])
+    }, []);
     
     return(<>
         <div className="relative w-full h-screen" id="projectScrollParent">
