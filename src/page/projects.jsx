@@ -28,7 +28,7 @@ function Project(){
         const parentWidth = projectScroll.parentElement.offsetWidth;
         const scrollDistance = scrollWidth - parentWidth;
         
-        // Force a small delay for mobile browsers to stabilize
+
         setTimeout(() => {
             ScrollTrigger.refresh();
         }, 100);
@@ -45,9 +45,8 @@ function Project(){
                 pinSpacing: true,
                 invalidateOnRefresh: true,
                 anticipatePin: 1,
-                // Mobile-specific fixes
+  
                 onUpdate: self => {
-                    // Prevent overlap on mobile
                     if (window.innerWidth <= 768) {
                         const progress = self.progress;
                         if (progress > 0.95) {
@@ -58,7 +57,7 @@ function Project(){
             }
         });
     
-        // Handle mobile resize
+
         const handleResize = () => {
             ScrollTrigger.refresh();
         };
