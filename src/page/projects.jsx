@@ -46,14 +46,14 @@ function Project(){
                 invalidateOnRefresh: true,
                 anticipatePin: 1,
   
-                onUpdate: self => {
-                    if (window.innerWidth <= 768) {
-                        const progress = self.progress;
-                        if (progress > 0.95) {
-                            gsap.to(projectScroll, { x: -scrollDistance * 0.95 });
-                        }
-                    }
-                }
+                // onUpdate: self => {
+                //     if (window.innerWidth <= 768) {
+                //         const progress = self.progress;
+                //         if (progress > 0.95) {
+                //             gsap.to(projectScroll, { x: -scrollDistance * 0.95 });
+                //         }
+                //     }
+                // }
             }
         });
     
