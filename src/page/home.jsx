@@ -20,19 +20,8 @@ function Home(){
  }
  
  useEffect(() => {
-    const handleLoad = () =>{
-         setTimeout(() => {
-            setPageLoading(false);
-          }, 5000);
-    } 
-
-    if (document.readyState === "complete") {
-      setPageLoading(false);
-    } else {
-      window.addEventListener("load", handleLoad);
-    }
-
-    return () => window.removeEventListener("load", handleLoad);
+    const id = setTimeout(() => setPageLoading(false), 5000);
+    return () => clearTimeout(id);
  }, [])
 
     
