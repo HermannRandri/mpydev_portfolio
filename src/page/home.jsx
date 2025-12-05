@@ -78,7 +78,7 @@ function Home(){
                                                 {
                                                 drop && 
                                                     <div className='flex gap-6 text-[#28acaca4] py-2 transform transition-all duration-200'>
-                                                        <a download  className=" hover:underline" href="/Hermann-Randrianirina-Resume.pdf">
+                                                        <a download  className=" hover:underline" href="/Resume-Hermann-Randrianirina.pdf">
                                                             En
                                                         </a>
                                                         <a download  className=" hover:underline" href="/CV-Hermann-Randrianirina.pdf">
